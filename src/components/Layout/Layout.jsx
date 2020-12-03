@@ -73,11 +73,11 @@ const Layout = props =>{
                         <Signup user={user} setUser={setUser} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/>
                     </Route>
                     <Route path="/admin">
-                        {isLoggedIn ? <Admin user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/> : <Redirect to="/signin" />}
+                        {isLoggedIn ? <Admin user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/> : <Redirect to="/" />}
                         
                     </Route>
                     <Route path="/user">
-                        {isLoggedIn ? <User user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/> : <Redirect to="/signin" />}
+                        {isLoggedIn ? <User user={user} setUser={setUser} isAdmin={isAdmin} setIsAdmin={setIsAdmin}/> : <Redirect to="/" />}
                         
                     </Route>
                     <Route path="/getCardInfo/:id">

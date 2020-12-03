@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from '@material-ui/core/Button';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Button = () => {
-  // const { loginWithRedirect } = useAuth0();
+const { loginWithRedirect } = useAuth0();
 
-  return <Link to='/signin'>
-            <LoginButton>Log In</LoginButton>
-          </Link>;
+  return <button
+  className="btn btn-primary btn-block"
+  onClick={() => loginWithRedirect()}
+>
+  Log In
+</button>;
 };
 
 export default Button;
