@@ -54,7 +54,6 @@ function App() {
                     setIsAdmin={setIsAdmin}
                 />
             </StylesProvider>
-            <p>{JSON.stringify(user)}</p>
         </div>
     );
 }
